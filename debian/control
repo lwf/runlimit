@@ -1,0 +1,15 @@
+Source: runlimit
+Section: unknown
+Priority: optional
+Maintainer: Torbjörn Norinder <torbjorn@genunix.se>
+Build-Depends: debhelper (>= 8.0.0), dh-golang, golang-go (>= 1.5)
+Standards-Version: 3.9.4
+Homepage: http://github.com/lwf/runlimit
+Vcs-Git: git://github.com/lwf/runlimit
+
+Package: runlimit
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Rate limiter for command invocations
+ runlimit is a rate limiter for command invocations. Intended to be used with
+ daemontools and similar process supervision frameworks.

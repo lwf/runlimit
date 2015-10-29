@@ -1,0 +1,18 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+export DH_OPTIONS
+
+export GOPATH := $(CURDIR)/obj-$(DEB_BUILD_GNU_TYPE)
+
+export DH_GOPKG := github.com/lwf/runlimit
+
+build:
+	go get -d -t .
+	dh build --buildsystem=golang --with=golang
+
+%:
+	dh $@ --buildsystem=golang --with=golang

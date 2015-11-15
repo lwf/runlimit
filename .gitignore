@@ -2,3 +2,6 @@ target/*
 *.swp
 obj-*
 debian/runlimit
+debian/files
+debian/runlimit.subst*
+debian/*.log
